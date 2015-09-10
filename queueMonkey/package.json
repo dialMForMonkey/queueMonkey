@@ -1,0 +1,28 @@
+{
+  "name": "queueMonkey",
+  "version": "0.0.5",
+  "description": "Management asynchronous methods , with flow control , parallel and series in a structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dialMForMonkey/queueMonkey.git"
+  },
+  "keywords": [
+    "fila",
+    "queue",
+    "async",
+    "series",
+    "paralelo",
+    "parallel",
+    "serie"
+  ],
+  "author": "dialMForMonkey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dialMForMonkey/queueMonkey/issues"
+  },
+  "homepage": "https://github.com/dialMForMonkey/queueMonkey"
+}
