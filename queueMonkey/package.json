@@ -1,5 +1,5 @@
 {
-  "name": "queueMonkey",
+  "name": "queuemonkey",
   "version": "0.0.5",
   "description": "Management asynchronous methods , with flow control , parallel and series in a structure",
   "main": "index.js",
@@ -19,10 +19,8 @@
     "parallel",
     "serie"
   ],
+  "readmeFilename": "README.md",
   "author": "dialMForMonkey",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dialMForMonkey/queueMonkey/issues"
-  },
   "homepage": "https://github.com/dialMForMonkey/queueMonkey"
 }
