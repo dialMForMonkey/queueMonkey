@@ -1,6 +1,6 @@
 {
   "name": "queuemonkey",
-  "version": "0.0.5",
+  "version": "0.0.5b",
   "description": "Management asynchronous methods , with flow control , parallel and series in a structure",
   "main": "index.js",
   "scripts": {
