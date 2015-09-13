@@ -1,4 +1,5 @@
 var Fila = function (context, timeout){
+	
 	this.timeout = timeout;
 	if(context){
 		this.addContext(context);
@@ -9,12 +10,12 @@ Fila.prototype.addContext = function(json){
 	var self = this, 
 		keys = Object.getOwnPropertyNames(json);
 	for (var i = 0;  i < keys.length; i++) {
-		self[keys[i]] = json[keys[i]
-	};
+		self[keys[i]] = json[keys[i]];
+	}
 };
 Fila.prototype.resetSelf = function(){
 	delete this ;
-}
+};
 Fila.prototype.go = function (array){
 	
 	var self = this,
@@ -85,6 +86,10 @@ function checkeTypeOf(param){
 		isObject : function(){
 			return Object.prototype.toString.call(param) === "[object Object]";
 
+		},
+		isFunction : function(){
+			return Object.prototype.toString.call(param) === "[object Function]";
+
 		}
 	}
 }
@@ -94,13 +99,12 @@ function getArrayName(array){
 	var objNamePos = {};
 	for (var a =0, max = array.length; a < max ; a++) {
 		if(array[a].name)
-			objNamePos[array[a].name] = a;
-		if(checkeTypeOf(array[a]).isObject()){
-			if(array[a].fluxo)
-				objNamePos[array[a].nome || array[a].fluxo.name] = a;
-			else if(array[a].paralelo)
-				objNamePos[array[a].nome] = a;
+			objNamePos[array[a].name ] = a;
+		else if(array[a].nome){
+			objNamePos[array[a].nome ] = a;
 		}
+		else 
+			objNamePos[a] = a;
 	};
 	return objNamePos;
 };
