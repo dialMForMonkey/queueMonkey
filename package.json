@@ -1,6 +1,6 @@
 {
   "name": "queuemonkey",
-  "version": "0.0.5",
+  "version": "0.0.5c",
   "description": "Management asynchronous methods , with flow control , parallel and series in a structure",
   "main": "index.js",
   "scripts": {
@@ -19,16 +19,8 @@
     "parallel",
     "serie"
   ],
-  "author": {
-    "name": "dialMForMonkey"
-  },
+  "readmeFilename": "README.md",
+  "author": "dialMForMonkey",
   "license": "ISC",
-  "homepage": "https://github.com/dialMForMonkey/queueMonkey",
-  "bugs": {
-    "url": "https://github.com/dialMForMonkey/queueMonkey/issues"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "queuemonkey@0.0.5",
-  "_shasum": "973e84dcf676e7061fcfb2b5c020532fc3fca142",
-  "_from": "queuemonkey@*"
+  "homepage": "https://github.com/dialMForMonkey/queueMonkey"
 }
