@@ -1,7 +1,7 @@
 /*
 	exemplo 2 :
-	mostrando alteracao do fluxo da funcaoUno direto para funcTres
-	
+	mostrando alteracao do fluxo da funcaoUno direto para funcaoTres
+
 	Obs.: para usar as funcoes no f.go , as funcoes prescisao estar nomeadas
 */
 
@@ -11,47 +11,45 @@ var fila = require("queuemonkey");
 	};
 	var f = new fila(contexto);
 	//alteracao de fluxo
-	f.go([funcUno, funcDos, funcTres]);
-	
-	function funcUno(next){
+	f.go([funcaoUm, funcaoDois, funcaoTres]);
+
+	function funcaoUm(next){
 		//self igual ao this do new fila();
 		var self = this;
 		//setTimeout, para simular eventos assincronos
 		setTimeout(function(){
-			self.query={"funcUno":"OK"};
-			console.log("function Uno");
+			self.query={"funcaoUm":"OK"};
+			console.log("function Um");
 			console.log(self.query);
 			//quando finalizar a funcao chame o next
 			//alterado do proximo, sem passar pela funcaoDos
-			next("funcTres");
+			next("funcaoTres");
 		},400);
-		
+
 	}
-	
-	function funcDos(next){
+
+	function funcaoDois(next){
 		//self igual ao this do new fila();
 		var self = this;
 		//setTimeout, para simular eventos assincronos
 		setTimeout(function(){
-			self.query.funcDos="OK";
-			console.log("function Dos");
+			self.query.funcaoDois="OK";
+			console.log("function Dois");
 			console.log(self.query);
 			//quando finalizar a funcao chame o next
 			next();
 		},400);
 	}
-	
-	function funcTres(next){
+
+	function funcaoTres(next){
 		//self igual ao this do new fila();
 		var self = this;
 		//setTimeout, para simular eventos assincronos
 		setTimeout(function(){
-			self.query.funcTres="OK";
+			self.query.funcaoTres="OK";
 			console.log("function Tres");
 			console.log(self.query);
 			//quando finalizar a funcao chame o next
 			next();
 		},400);
 	}
-	
-	
